@@ -1,10 +1,9 @@
-import dotenv, { config } from "dotenv";
+import dotenv from "dotenv";
 import express, { json } from "express";
 import cors from "cors";
-import connectToDatabase from "./database.js";
+import {connectToDatabase,testPoolConnection} from "./database.js";
 import { startServer } from "./serverInit.js";
 
-config();
 const app = express();
 dotenv.config();
 

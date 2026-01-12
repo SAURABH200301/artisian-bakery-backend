@@ -6,7 +6,7 @@ dev:
 	nodemon index.js
 
 start:
-	node index.js
+	nodemon
 
 up:
 	docker-compose up -d
@@ -22,3 +22,6 @@ build:
 
 db-up:
 	docker-compose up database -d
+
+opne-db-terminal:
+	docker exec -it artisian_bakery_db psql -U postgres -d artisian_bakery
